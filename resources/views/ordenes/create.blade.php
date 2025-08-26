@@ -1,9 +1,8 @@
-@extends('layouts.app')
-
-@section('title', 'Nueva Orden de Servicio')
-
-@section('content')
-<h1>Nueva Orden de Servicio</h1>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Nueva Orden de Trabajo
+        </h2>
+    </x-slot>
 
 <form action="{{ route('ordenes.store') }}" method="POST">
     @csrf
@@ -61,4 +60,4 @@ document.getElementById('cliente_id').addEventListener('change', function() {
     }
 });
 </script>
-@endsection
+</x-app-layout>

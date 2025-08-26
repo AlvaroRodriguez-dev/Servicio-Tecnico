@@ -1,9 +1,9 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Ordenes de Servicio
+        </h2>
+    </x-slot>
 
-@section('title', 'Órdenes de Servicio')
-
-@section('content')
-<h1>Órdenes de Servicio</h1>
 <a href="{{ route('ordenes.create') }}" class="btn btn-success mb-3">Nueva Orden</a>
 
 <table class="table table-bordered">
@@ -40,4 +40,4 @@
         @endforeach
     </tbody>
 </table>
-@endsection
+</x-app-layout>

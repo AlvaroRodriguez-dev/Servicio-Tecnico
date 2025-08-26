@@ -1,9 +1,8 @@
-@extends('layouts.app')
-
-@section('title', 'Editar Equipo')
-
-@section('content')
-<h1>Editar Equipo</h1>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">Editar Equipo
+        </h2>
+    </x-slot>
 
 <form method="POST" action="{{ route('equipos.update', $equipo) }}">
     @csrf @method('PUT')
@@ -29,4 +28,4 @@
     <button type="submit" class="btn btn-primary">Actualizar</button>
     <a href="{{ route('equipos.index') }}" class="btn btn-secondary">Volver</a>
 </form>
-@endsection
+</x-app-layout>
